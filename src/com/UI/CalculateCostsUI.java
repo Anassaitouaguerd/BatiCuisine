@@ -32,7 +32,7 @@ public class CalculateCostsUI {
         System.out.println("Address: " + client.getAddress());
         System.out.println("Is Professional: " + client.isProfessional());
         System.out.println("Surface: " + project.getSurface());
-        System.out.println("-------------------");
+        System.out.println("-------------------\n");
 
         // Display Materials
         double totalMaterialCost = 0;
@@ -52,15 +52,18 @@ public class CalculateCostsUI {
             Double totalCostMaterialWithVAT = calculeTva(totalCostMateriale, material.getVATRate());
             System.out.println("Total Cost: " + totalCostMateriale);
             System.out.println("Total Cost with VAT: " + totalCostMaterialWithVAT);
-            System.out.println("-------------------");
+            System.out.println("-------------------\n");
             totalMaterialCost += totalCostMateriale;
             totalMaterialCostWithVAT += totalCostMaterialWithVAT;
         }
 
         //Totale cost materials
+        System.out.println("┌───────────────────────────────────────────┐");
+        System.out.println("│         Total All Materials Cost          │");
+        System.out.println("└───────────────────────────────────────────┘");
         System.out.println("Total Material Cost: " + totalMaterialCost);
         System.out.println("Total Material Cost with VAT: " + totalMaterialCostWithVAT);
-        System.out.println("-------------------");
+        System.out.println("-------------------\n");
 
         // Display Labors
         double totalLaborCost = 0;
@@ -81,19 +84,25 @@ public class CalculateCostsUI {
 
             System.out.println("Total Cost: " + totalCostLabor);
             System.out.println("Total Cost with VAT: " + totalCostLaborWithVAT);
-            System.out.println("-------------------");
+            System.out.println("-------------------\n");
             totalLaborCost += totalCostLabor;
             totalLaborCostWithVAT += totalCostLaborWithVAT;
         }
+        System.out.println("┌────────────────────────────────────────┐");
+        System.out.println("│         Total All Labors Cost          │");
+        System.out.println("└────────────────────────────────────────┘");
         System.out.println("Total Labor Cost: " + totalLaborCost);
         System.out.println("Total Labor Cost with VAT: " + totalLaborCostWithVAT);
-        System.out.println("-------------------");
+        System.out.println("-------------------\n");
 
         // Display grand totals
-        System.out.println("---- Grand Totals ----");
+        System.out.println("┌────────────────────────────────────┐");
+        System.out.println("│            Grand Totals            │");
+        System.out.println("└────────────────────────────────────┘");
         System.out.println("Total Project Cost (without VAT): " + (totalMaterialCost + totalLaborCost));
         System.out.println("Total Project Cost (with VAT): " + (totalMaterialCostWithVAT + totalLaborCostWithVAT));
         new ProjectService().updateProject((totalMaterialCost + totalLaborCost) , lastProjectId);
+        System.out.println("\n");
 
     }
 
