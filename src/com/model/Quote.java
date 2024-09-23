@@ -16,10 +16,11 @@ public class Quote {
     }
 
     // Parameterized constructor
-    public Quote(Long id, LocalDate issueDate, LocalDate validityDate, Project project) {
+    public Quote(Long id, LocalDate issueDate, LocalDate validityDate, Boolean accepted, Project project) {
         this.id = id;
         this.issueDate = issueDate;
         this.validityDate = validityDate;
+        this.accepted = accepted;
         this.project = project;
     }
 

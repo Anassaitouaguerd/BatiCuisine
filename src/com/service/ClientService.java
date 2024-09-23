@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class ClientService implements ClientInterface {
 
     public String createClient(String name , String phone , String address, Boolean isProfessional) {
-        String creatClient = new ClientRepository().createClient(new Client(name,phone,address,isProfessional));
+        String creatClient = new ClientRepository().createClient(new Client(name,address , phone,isProfessional));
         System.out.println("Client "+creatClient+" is created");
         System.out.println("Would you like to continue with this client? (y/n):");
         Scanner scanner = new Scanner(System.in);

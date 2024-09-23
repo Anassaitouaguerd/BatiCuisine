@@ -109,4 +109,27 @@ public class ProjectRepository {
             e.printStackTrace();
         }
     }
+    public void updateProjectStatus(String status, Long projectId) {
+        String querySQL = "UPDATE project SET projectstatus = ? WHERE id = ?";
+        try (Connection conn = DatabaseConnection.getConnection();
+             PreparedStatement statement = conn.prepareStatement(querySQL)) {
+            statement.setString(1, status);
+            statement.setLong(2, projectId);
+            statement.executeUpdate();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public boolean checkQuoteExist(Long projectId){
+        String querySQL = "SELECT * FROM quote WHERE projectid = ?";
+        try (Connection connection = DatabaseConnection.getConnection();
+             PreparedStatement statement = connection.prepareStatement(querySQL)) {
+            statement.setLong(1, projectId);
+            ResultSet resultSet = statement.executeQuery();
+            return resultSet.next();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 }

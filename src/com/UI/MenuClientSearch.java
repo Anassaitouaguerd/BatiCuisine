@@ -371,7 +371,7 @@ private List<Object> displayInputsTotalCost() {
 }
 
     // set inputs for saving quote
-    private List<Object> displayInputsSavingQuote() {
+    public List<Object> displayInputsSavingQuote() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("┌─────────────────────────────────────┐");
         System.out.println("│         Quote Registration          │");

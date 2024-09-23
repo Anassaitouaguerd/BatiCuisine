@@ -51,4 +51,8 @@ public class ProjectService implements ProjectInterface {
     public void profitMargin(Double profitMargin, Long projectId) {
         new ProjectRepository().updateProject(profitMargin, projectId);
     }
+
+    public boolean checkQuoteExist(Long projectId){
+        return new ProjectRepository().checkQuoteExist(projectId);
+    }
 }

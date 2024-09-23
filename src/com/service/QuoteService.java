@@ -11,4 +11,10 @@ public class QuoteService {
         quote.setValidityDate(validityDate);
         new QuoteRepository().createQuote(quote ,lastProjectId);
     }
+    public Quote getQuote(Long projectId){
+        return new QuoteRepository().getQuote(projectId);
+    }
+    public void updateQuote(String status, Long quoteId){
+        new QuoteRepository().updateQuote(status, quoteId);
+    }
 }
