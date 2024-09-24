@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/com/repository/ClientRepository.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/com/repository/ComponentRepository.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/com/repository/LaborRepository.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/com/repository/MaterialRepository.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/com/repository/ProjectRepository.java" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/src/com/repository/QuoteRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/com/baticuisine/repository/ClientRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/com/baticuisine/repository/ComponentRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/com/baticuisine/repository/LaborRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/com/baticuisine/repository/MaterialRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/com/baticuisine/repository/ProjectRepository.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/com/baticuisine/repository/QuoteRepository.java" dialect="GenericSQL" />
   </component>
 </project>

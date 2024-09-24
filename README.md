@@ -16,12 +16,12 @@ This Java application is designed to calculate and manage costs for kitchen reno
 
 The project is structured into several packages:
 
-- `com.UI`: Contains the user interface classes
-- `com.service`: Contains service classes that implement business logic
-- `com.repository`: Contains repository classes for database operations
-- `com.model`: Contains model classes representing the data entities
-- `com.interfaces`: Contains interface definitions
-- `com.config`: Contains configuration classes (e.g., database connection)
+- `com.baticuisine.UI`: Contains the user interface classes
+- `com.baticuisine.service`: Contains service classes that implement business logic
+- `com.baticuisine.repository`: Contains repository classes for database operations
+- `com.baticuisine.model`: Contains model classes representing the data entities
+- `com.baticuisine.interfaces`: Contains interface definitions
+- `com.baticuisine.config`: Contains configuration classes (e.g., database connection)
 
 ### Key Components
 
