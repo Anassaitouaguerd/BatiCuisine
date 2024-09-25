@@ -47,12 +47,12 @@ Based on the information from your project **BatiCuisine**, here’s a draft for
 ### Steps
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/BatiCuisine.git
+   git clone https://github.com/Anassaitouaguerd/BatiCuisine.git
    ```
 2. Compile and package the project:
    ```bash
    javac -d bin src/*.java
-   jar cvf BatiCuisine.jar -C bin .
+   jar cvfe Baticuisine.jar com.baticuisine.Main -C out/production/Baticuisine .
    ```
 3. Set up the database:
     - Create a PostgreSQL database and tables according to the project schema.
@@ -60,7 +60,7 @@ Based on the information from your project **BatiCuisine**, here’s a draft for
 
 4. Run the application:
    ```bash
-   java -jar BatiCuisine.jar
+   java -cp Baticuisine.jar;lib/postgresql-42.7.4.jar com.baticuisine.Main
    ```
 
 ## Usage
@@ -91,11 +91,6 @@ Based on the information from your project **BatiCuisine**, here’s a draft for
 
 ## Class Diagram
 
-Include a link or image of your class diagram for reference.
-
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Let me know if you want to add or modify anything in this draft!
+```
+/Diagrammes/ClassDiagram.mdj
+```
