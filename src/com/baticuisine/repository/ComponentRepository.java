@@ -77,8 +77,8 @@
                     "m.qualitycoefficient AS material_qualityCoefficient, " +
                     "l.hourlyrate AS labor_hourlyRate, " +
                     "l.workhours AS labor_workHours, l.workerproductivity AS labor_workerProductivity, " +
-                    "l.labortype AS labor_type " + // Removed trailing comma here
-                    "FROM component c " +  // No quotes needed for component if it's not reserved
+                    "l.labortype AS labor_type " +
+                    "FROM component c " +
                     "LEFT JOIN material m ON c.id = m.id " +
                     "LEFT JOIN labor l ON c.id = l.id " +
                     "WHERE c.projectid = ?";

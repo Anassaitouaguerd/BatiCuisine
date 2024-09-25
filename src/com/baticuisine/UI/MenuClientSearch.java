@@ -376,24 +376,36 @@ private List<Object> displayInputsTotalCost() {
         System.out.println("│         Quote Registration          │");
         System.out.println("└─────────────────────────────────────┘");
         String issueDate;
+        LocalDate issueLocalDate;
         while (true) {
-            System.out.println("Enter the date the quote was issued (format: dd/mm/yyyy) : ");
+            System.out.println("Enter the date the quote was issued (format: dd/MM/yyyy) : ");
             issueDate = scanner.nextLine().trim();
             if (issueDate.matches("\\d{2}/\\d{2}/\\d{4}")) {
-                break;
+                issueLocalDate = LocalDate.parse(issueDate, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                if (issueLocalDate.isAfter(LocalDate.now())) {
+                    break;
+                } else {
+                    System.out.println("Invalid input. Issue date must be after the current date.");
+                }
             } else {
-                System.out.println("Invalid input. Please enter the date in the format dd/mm/yyyy.");
+                System.out.println("Invalid input. Please enter the date in the format dd/MM/yyyy.");
             }
         }
 
         String validityDate;
+        LocalDate validityLocalDate;
         while (true) {
-            System.out.println("Enter the validity date of the quote (format: dd/mm/yyyy) : ");
+            System.out.println("Enter the validity date of the quote (format: dd/MM/yyyy) : ");
             validityDate = scanner.nextLine().trim();
             if (validityDate.matches("\\d{2}/\\d{2}/\\d{4}")) {
-                break;
+                validityLocalDate = LocalDate.parse(validityDate, DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+                if (validityLocalDate.isAfter(issueLocalDate)) {
+                    break;
+                } else {
+                    System.out.println("Invalid input. Validity date must be after the issue date.");
+                }
             } else {
-                System.out.println("Invalid input. Please enter the date in the format dd/mm/yyyy.");
+                System.out.println("Invalid input. Please enter the date in the format dd/MM/yyyy.");
             }
         }
         return List.of(issueDate, validityDate);

@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 public class ClientRepository {
 
         public String createClient(Client client) {
-            // TODO - implement ClientRepository.createClient
             String querySQL = "INSERT INTO client (name, address, phone, isprofessional) VALUES (?, ?, ?, ?)";
             try(Connection connection = DatabaseConnection.getConnection();
                 PreparedStatement statement = connection.prepareStatement(querySQL)){
@@ -30,16 +29,6 @@ public class ClientRepository {
                 e.printStackTrace();
             }
             return null;
-        }
-
-        public void updateClient() {
-            // TODO - implement ClientRepository.updateClient
-            throw new UnsupportedOperationException();
-        }
-
-        public void deleteClient() {
-            // TODO - implement ClientRepository.deleteClient
-            throw new UnsupportedOperationException();
         }
 
   public static Client getClient(String clientName) {
